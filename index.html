@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -13,234 +13,134 @@
      SIDEBAR
 ════════════════════════════════════════════════════════ -->
 <aside class="sidebar">
+
+  <!-- LOGO -->
   <div class="sidebar-logo">
-    <div class="logo-icon">⚙️</div>
-    <h2>Smart Predictive<br>Maintenance System</h2>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="logo-icon">⚙️</div>
+      <div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:9px;font-weight:900;color:var(--accent);letter-spacing:1px;text-transform:uppercase;line-height:1.3;">SMART PREDICTIVE</div>
+        <div style="font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:#94a3b8;letter-spacing:.5px;text-transform:uppercase;line-height:1.3;">MAINTENANCE SYSTEM</div>
+      </div>
+    </div>
   </div>
 
+  <!-- NAV -->
   <nav class="sidebar-nav">
     <a class="nav-item active" data-page="page-home">
-      <span class="nav-icon">🏠</span> Home
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </span>
+      Home
     </a>
     <a class="nav-item" data-page="page-dashboard">
-      <span class="nav-icon">📊</span> Dashboard
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+      </span>
+      Dashboard
     </a>
     <a class="nav-item" data-page="page-history">
-      <span class="nav-icon">🕐</span> Prediction History
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </span>
+      Prediction History
     </a>
     <a class="nav-item" data-page="page-analytics">
-      <span class="nav-icon">📈</span> Analytics
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </span>
+      Analytics
     </a>
     <a class="nav-item" data-page="page-about">
-      <span class="nav-icon">💡</span> About Project
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </span>
+      About Project
     </a>
     <a class="nav-item" data-page="page-contact">
-      <span class="nav-icon">✉️</span> Contact
+      <span class="nav-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </span>
+      Contact
     </a>
   </nav>
 
+  <!-- STATUS -->
   <div class="sidebar-status">
     <span class="status-dot"></span>
-    <span style="color:#64748b;font-size:12px;">Model Status: <strong style="color:#10b981;">Online</strong></span>
+    <span style="color:#64748b;font-size:11px;">Model Status: <strong style="color:#10b981;">Online</strong></span>
   </div>
-  <div style="padding:10px 18px 16px;font-size:11px;color:#334155;line-height:1.5;">
+  <div style="padding:4px 18px 8px;font-size:10px;color:#334155;line-height:1.6;">
     AI-Powered Maintenance.<br>Reduce downtime, improve productivity.
   </div>
 
-  <!-- ── SIDEBAR ROBOT ARM ILLUSTRATION ── -->
+  <!-- ── SMALL ROBOT AT BOTTOM ── -->
   <div class="sidebar-robot-wrap">
-    <svg class="sidebar-robot-svg" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Industrial robot arm illustration">
+    <svg class="sidebar-robot-svg" viewBox="0 0 160 140" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <!-- Cyan glow filter -->
-        <filter id="glow-cyan" x="-40%" y="-40%" width="180%" height="180%">
-          <feGaussianBlur stdDeviation="3.5" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        <filter id="sg" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
         </filter>
-        <filter id="glow-strong" x="-60%" y="-60%" width="220%" height="220%">
-          <feGaussianBlur stdDeviation="5" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <!-- Gradients -->
-        <linearGradient id="base-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#0d2137"/>
-          <stop offset="100%" stop-color="#071525"/>
+        <radialGradient id="sb-bg" cx="50%" cy="80%" r="60%">
+          <stop offset="0%" stop-color="#0a2040" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#050d1a" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="sb-body" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#1a3a5c"/><stop offset="100%" stop-color="#071828"/>
         </linearGradient>
-        <linearGradient id="arm-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#1a3a5c"/>
-          <stop offset="50%" stop-color="#0f2a45"/>
-          <stop offset="100%" stop-color="#071a30"/>
+        <linearGradient id="sb-joint" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00c8f0"/><stop offset="100%" stop-color="#0055aa"/>
         </linearGradient>
-        <linearGradient id="arm-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#153050"/>
-          <stop offset="100%" stop-color="#0a1e35"/>
-        </linearGradient>
-        <linearGradient id="joint-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#00c8f0"/>
-          <stop offset="100%" stop-color="#0066aa"/>
-        </linearGradient>
-        <linearGradient id="floor-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.18"/>
-          <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
-        </linearGradient>
-        <radialGradient id="glow-floor" cx="50%" cy="0%" r="60%">
-          <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.22"/>
+        <radialGradient id="sb-floor" cx="50%" cy="100%" r="50%">
+          <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.3"/>
           <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
         </radialGradient>
-        <linearGradient id="claw-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#1e4a70"/>
-          <stop offset="100%" stop-color="#0a2a48"/>
-        </linearGradient>
-        <!-- Grid pattern -->
-        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-          <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00d4ff" stroke-width="0.3" stroke-opacity="0.12"/>
-        </pattern>
       </defs>
-
-      <!-- Background panel -->
-      <rect width="200" height="320" fill="url(#base-grad)" rx="10"/>
-      <rect width="200" height="320" fill="url(#grid)" rx="10"/>
-
-      <!-- Floor glow reflection -->
-      <ellipse cx="100" cy="305" rx="70" ry="12" fill="url(#glow-floor)"/>
-      <rect x="30" y="298" width="140" height="2" rx="1" fill="#00d4ff" opacity="0.25"/>
-
-      <!-- BASE PLATFORM -->
-      <rect x="60" y="278" width="80" height="22" rx="4" fill="url(#arm-grad)" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.5"/>
-      <rect x="65" y="282" width="70" height="6" rx="2" fill="#0a1e35" stroke="#00d4ff" stroke-width="0.4" stroke-opacity="0.4"/>
-      <!-- Base indicator lights -->
-      <circle cx="78" cy="291" r="2.5" fill="#00d4ff" filter="url(#glow-cyan)" opacity="0.9"/>
-      <circle cx="100" cy="291" r="2.5" fill="#10b981" filter="url(#glow-cyan)" opacity="0.9"/>
-      <circle cx="122" cy="291" r="2.5" fill="#7c3aed" filter="url(#glow-cyan)" opacity="0.9"/>
-
-      <!-- BASE ROTATION JOINT -->
-      <rect x="82" y="258" width="36" height="22" rx="3" fill="url(#arm-grad)" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.5"/>
-      <circle cx="100" cy="269" r="8" fill="url(#joint-grad)" filter="url(#glow-cyan)" opacity="0.9"/>
-      <circle cx="100" cy="269" r="4.5" fill="#001824"/>
-      <circle cx="100" cy="269" r="2" fill="#00d4ff" filter="url(#glow-strong)" opacity="0.95"/>
-
-      <!-- LOWER ARM SEGMENT -->
-      <rect x="88" y="165" width="24" height="96" rx="6" fill="url(#arm-grad)" stroke="#1e4a6a" stroke-width="0.8"/>
-      <!-- Arm panel lines -->
-      <line x1="93" y1="175" x2="107" y2="175" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.4"/>
-      <line x1="93" y1="190" x2="107" y2="190" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.4"/>
-      <line x1="93" y1="210" x2="107" y2="210" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.4"/>
-      <line x1="93" y1="230" x2="107" y2="230" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.4"/>
-      <!-- Cyan edge accent strips -->
-      <rect x="88" y="165" width="3" height="96" rx="1.5" fill="#00d4ff" opacity="0.35"/>
-      <rect x="109" y="165" width="3" height="96" rx="1.5" fill="#00d4ff" opacity="0.18"/>
-
-      <!-- ELBOW JOINT -->
-      <circle cx="100" cy="165" r="14" fill="url(#arm-grad2)" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.7"/>
-      <circle cx="100" cy="165" r="9"  fill="url(#joint-grad)" filter="url(#glow-cyan)" opacity="0.85"/>
-      <circle cx="100" cy="165" r="5"  fill="#001e30"/>
-      <circle cx="100" cy="165" r="2.5" fill="#00d4ff" filter="url(#glow-strong)" opacity="1"/>
-      <!-- Bolt markers around joint -->
-      <circle cx="100" cy="150" r="1.5" fill="#00d4ff" opacity="0.5"/>
-      <circle cx="115" cy="165" r="1.5" fill="#00d4ff" opacity="0.5"/>
-      <circle cx="100" cy="180" r="1.5" fill="#00d4ff" opacity="0.5"/>
-      <circle cx="85"  cy="165" r="1.5" fill="#00d4ff" opacity="0.5"/>
-
-      <!-- UPPER ARM SEGMENT (angled left) -->
-      <rect x="72" y="92" width="22" height="82" rx="6"
-            fill="url(#arm-grad)"
-            stroke="#1e4a6a" stroke-width="0.8"
-            transform="rotate(-18, 83, 133)"/>
-      <!-- Cyan strip on upper arm -->
-      <rect x="72" y="92" width="3" height="82" rx="1.5"
-            fill="#00d4ff" opacity="0.3"
-            transform="rotate(-18, 83, 133)"/>
-      <line x1="76" y1="105" x2="90" y2="105" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.35" transform="rotate(-18, 83, 133)"/>
-      <line x1="76" y1="125" x2="90" y2="125" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.35" transform="rotate(-18, 83, 133)"/>
-      <line x1="76" y1="145" x2="90" y2="145" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.35" transform="rotate(-18, 83, 133)"/>
-
-      <!-- SHOULDER JOINT -->
-      <circle cx="83" cy="100" r="13" fill="url(#arm-grad2)" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.7"/>
-      <circle cx="83" cy="100" r="8"  fill="url(#joint-grad)" filter="url(#glow-cyan)" opacity="0.85"/>
-      <circle cx="83" cy="100" r="4.5" fill="#001e30"/>
-      <circle cx="83" cy="100" r="2"  fill="#00d4ff" filter="url(#glow-strong)" opacity="1"/>
-
-      <!-- FOREARM (angled to the right, going up) -->
-      <rect x="82" y="42" width="20" height="68" rx="5"
-            fill="url(#arm-grad)"
-            stroke="#1e4a6a" stroke-width="0.8"
-            transform="rotate(22, 92, 76)"/>
-      <rect x="82" y="42" width="3" height="68" rx="1.5"
-            fill="#00d4ff" opacity="0.3"
-            transform="rotate(22, 92, 76)"/>
-
-      <!-- WRIST JOINT -->
-      <circle cx="108" cy="68" r="11" fill="url(#arm-grad2)" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.7"/>
-      <circle cx="108" cy="68" r="7"  fill="url(#joint-grad)" filter="url(#glow-cyan)" opacity="0.85"/>
-      <circle cx="108" cy="68" r="3.5" fill="#001e30"/>
-      <circle cx="108" cy="68" r="1.8" fill="#00d4ff" filter="url(#glow-strong)" opacity="1"/>
-
-      <!-- GRIPPER / END EFFECTOR -->
-      <!-- Main gripper body -->
-      <rect x="100" y="28" width="16" height="42" rx="4" fill="url(#claw-grad)" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.6" transform="rotate(8, 108, 49)"/>
-      <!-- Claw left -->
-      <path d="M 96 30 Q 88 22 86 12 Q 92 14 96 22 Z"
-            fill="url(#claw-grad)" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.7"
-            transform="rotate(8, 108, 49)"/>
-      <!-- Claw right -->
-      <path d="M 120 30 Q 128 22 130 12 Q 124 14 120 22 Z"
-            fill="url(#claw-grad)" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.7"
-            transform="rotate(8, 108, 49)"/>
-      <!-- Gripper glow tip left -->
-      <circle cx="91" cy="14" r="3" fill="#00d4ff" filter="url(#glow-strong)" opacity="0.85" transform="rotate(8, 108, 49)"/>
-      <!-- Gripper glow tip right -->
-      <circle cx="125" cy="14" r="3" fill="#00d4ff" filter="url(#glow-strong)" opacity="0.85" transform="rotate(8, 108, 49)"/>
-
-      <!-- DATA PANEL (small HUD on side) -->
-      <rect x="12" y="110" width="52" height="72" rx="5" fill="#040f1c" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.5"/>
-      <!-- HUD title -->
-      <rect x="12" y="110" width="52" height="12" rx="5" fill="#00d4ff" opacity="0.12"/>
-      <text x="38" y="120" text-anchor="middle" font-family="monospace" font-size="5.5" fill="#00d4ff" opacity="0.9" font-weight="bold">SENSOR DATA</text>
-      <!-- HUD rows -->
-      <text x="17" y="133" font-family="monospace" font-size="5" fill="#64748b">TEMP</text>
-      <text x="55" y="133" text-anchor="end" font-family="monospace" font-size="5" fill="#00d4ff">72.4°C</text>
-      <text x="17" y="144" font-family="monospace" font-size="5" fill="#64748b">RPM </text>
-      <text x="55" y="144" text-anchor="end" font-family="monospace" font-size="5" fill="#10b981">1450</text>
-      <text x="17" y="155" font-family="monospace" font-size="5" fill="#64748b">VIBE</text>
-      <text x="55" y="155" text-anchor="end" font-family="monospace" font-size="5" fill="#f59e0b">0.24g</text>
-      <text x="17" y="166" font-family="monospace" font-size="5" fill="#64748b">HLTH</text>
-      <text x="55" y="166" text-anchor="end" font-family="monospace" font-size="5" fill="#10b981">98%</text>
-      <!-- Mini bar -->
-      <rect x="17" y="170" width="38" height="3" rx="1.5" fill="#1a3050"/>
-      <rect x="17" y="170" width="37" height="3" rx="1.5" fill="#10b981" opacity="0.8"/>
-
-      <!-- Connector wire to arm -->
-      <path d="M 64 155 Q 72 160 86 162" stroke="#00d4ff" stroke-width="0.8" fill="none" stroke-opacity="0.4" stroke-dasharray="3 2"/>
-
-      <!-- FLOATING PARTICLES / energy dots -->
-      <circle cx="145" cy="80"  r="1.5" fill="#00d4ff" opacity="0.6" filter="url(#glow-cyan)">
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.1s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="80;74;80" dur="2.1s" repeatCount="indefinite"/>
+      <rect width="160" height="140" fill="url(#sb-bg)" rx="8"/>
+      <ellipse cx="80" cy="133" rx="55" ry="7" fill="url(#sb-floor)"/>
+      <line x1="30" y1="128" x2="130" y2="128" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.3"/>
+      <rect x="48" y="112" width="64" height="16" rx="3" fill="url(#sb-body)" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.4"/>
+      <rect x="53" y="116" width="54" height="5" rx="2" fill="#040f1c"/>
+      <circle cx="63" cy="122" r="2" fill="#00d4ff" filter="url(#sg)" opacity="0.9"/>
+      <circle cx="80" cy="122" r="2" fill="#10b981" filter="url(#sg)" opacity="0.9"/>
+      <circle cx="97" cy="122" r="2" fill="#7c3aed" filter="url(#sg)" opacity="0.9"/>
+      <rect x="73" y="68" width="14" height="46" rx="4" fill="url(#sb-body)" stroke="#1e4a6a" stroke-width="0.6"/>
+      <rect x="73" y="68" width="2.5" height="46" rx="1" fill="#00d4ff" opacity="0.3"/>
+      <line x1="76" y1="78" x2="85" y2="78" stroke="#00d4ff" stroke-width="0.4" stroke-opacity="0.5"/>
+      <line x1="76" y1="90" x2="85" y2="90" stroke="#00d4ff" stroke-width="0.4" stroke-opacity="0.5"/>
+      <line x1="76" y1="102" x2="85" y2="102" stroke="#00d4ff" stroke-width="0.4" stroke-opacity="0.5"/>
+      <circle cx="80" cy="68" r="10" fill="url(#sb-body)" stroke="#00d4ff" stroke-width="0.7" stroke-opacity="0.6"/>
+      <circle cx="80" cy="68" r="6" fill="url(#sb-joint)" filter="url(#sg)" opacity="0.8"/>
+      <circle cx="80" cy="68" r="3" fill="#001824"/>
+      <circle cx="80" cy="68" r="1.5" fill="#00d4ff" filter="url(#sg)" opacity="1"/>
+      <rect x="68" y="28" width="14" height="46" rx="4" fill="url(#sb-body)" stroke="#1e4a6a" stroke-width="0.6" transform="rotate(-14,75,51)"/>
+      <rect x="68" y="28" width="2.5" height="46" rx="1" fill="#00d4ff" opacity="0.25" transform="rotate(-14,75,51)"/>
+      <circle cx="73" cy="36" r="9" fill="url(#sb-body)" stroke="#00d4ff" stroke-width="0.7" stroke-opacity="0.6"/>
+      <circle cx="73" cy="36" r="5.5" fill="url(#sb-joint)" filter="url(#sg)" opacity="0.8"/>
+      <circle cx="73" cy="36" r="2.5" fill="#001824"/>
+      <circle cx="73" cy="36" r="1.2" fill="#00d4ff" filter="url(#sg)" opacity="1"/>
+      <rect x="70" y="10" width="12" height="36" rx="3.5" fill="url(#sb-body)" stroke="#1e4a6a" stroke-width="0.6" transform="rotate(18,76,28)"/>
+      <circle cx="90" cy="18" r="7" fill="url(#sb-body)" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.6"/>
+      <circle cx="90" cy="18" r="4" fill="url(#sb-joint)" filter="url(#sg)" opacity="0.8"/>
+      <circle cx="90" cy="18" r="1.8" fill="#00d4ff" filter="url(#sg)" opacity="0.9"/>
+      <path d="M 88 11 Q 83 5 82 -1 Q 87 2 88 8 Z" fill="#1e4a70" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.6"/>
+      <path d="M 96 11 Q 101 5 102 -1 Q 97 2 96 8 Z" fill="#1e4a70" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.6"/>
+      <circle cx="84" cy="0" r="2" fill="#00d4ff" filter="url(#sg)" opacity="0.85"/>
+      <circle cx="99" cy="0" r="2" fill="#00d4ff" filter="url(#sg)" opacity="0.85"/>
+      <circle cx="120" cy="40" r="1.2" fill="#00d4ff" opacity="0.7" filter="url(#sg)">
+        <animate attributeName="cy" values="40;34;40" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="158" cy="130" r="1.2" fill="#7c3aed" opacity="0.7" filter="url(#glow-cyan)">
-        <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="130;124;130" dur="1.8s" repeatCount="indefinite"/>
+      <circle cx="36" cy="80" r="1" fill="#7c3aed" opacity="0.6" filter="url(#sg)">
+        <animate attributeName="cy" values="80;74;80" dur="2.5s" repeatCount="indefinite"/>
       </circle>
-      <circle cx="150" cy="200" r="1.8" fill="#00d4ff" opacity="0.5" filter="url(#glow-cyan)">
-        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.5s" repeatCount="indefinite"/>
-        <animate attributeName="cy" values="200;194;200" dur="2.5s" repeatCount="indefinite"/>
-      </circle>
-      <circle cx="40"  cy="240" r="1.3" fill="#10b981" opacity="0.6" filter="url(#glow-cyan)">
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
-      </circle>
-
-      <!-- Scan line animation -->
-      <rect x="10" y="0" width="180" height="2" rx="1" fill="#00d4ff" opacity="0.07">
-        <animate attributeName="y" values="0;318;0" dur="4s" repeatCount="indefinite"/>
+      <rect x="5" y="0" width="150" height="1.5" rx="1" fill="#00d4ff" opacity="0.06">
+        <animate attributeName="y" values="0;138;0" dur="4s" repeatCount="indefinite"/>
       </rect>
-
-      <!-- Corner brackets (HUD style) -->
-      <path d="M 8 8 L 8 18 M 8 8 L 18 8"   stroke="#00d4ff" stroke-width="1.2" fill="none" stroke-opacity="0.5"/>
-      <path d="M 192 8 L 192 18 M 192 8 L 182 8" stroke="#00d4ff" stroke-width="1.2" fill="none" stroke-opacity="0.5"/>
-      <path d="M 8 312 L 8 302 M 8 312 L 18 312"    stroke="#00d4ff" stroke-width="1.2" fill="none" stroke-opacity="0.5"/>
-      <path d="M 192 312 L 192 302 M 192 312 L 182 312" stroke="#00d4ff" stroke-width="1.2" fill="none" stroke-opacity="0.5"/>
     </svg>
   </div>
-  <!-- ── END ROBOT ARM ── -->
+  <!-- ── END ROBOT ── -->
 
 </aside>
 
