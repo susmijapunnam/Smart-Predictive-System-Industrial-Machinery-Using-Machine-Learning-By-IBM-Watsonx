@@ -297,7 +297,7 @@ body {
 /* ── CANVAS CHART ────────────────────────────────────────── */
 canvas { max-width: 100%; }
 
-/* ── HERO SECTION ────────────────────────────────────────── */
+/* ── HERO (old — kept for other pages if referenced) ─────── */
 .hero {
   background: linear-gradient(135deg, #071325 0%, #0a1e3d 60%, #0d0a25 100%);
   border: 1px solid var(--border);
@@ -306,35 +306,159 @@ canvas { max-width: 100%; }
   margin-bottom: 24px;
   position: relative; overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute; top: -50%; right: -10%;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(0,212,255,.08) 0%, transparent 70%);
-  pointer-events: none;
-}
 .hero-content { position: relative; z-index: 1; max-width: 560px; }
-.hero h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 32px; font-weight: 900;
-  line-height: 1.2; margin-bottom: 16px;
-  background: linear-gradient(90deg, var(--accent), #fff, var(--accent2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-.hero p { color: #94a3b8; font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-badge {
-  position: absolute; right: 40px; top: 50%; transform: translateY(-50%);
-  text-align: center;
-}
 .health-ring {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px; font-weight: 900;
-  color: var(--accent3);
-  line-height: 1;
+  color: var(--accent3); line-height: 1;
 }
-.health-ring-label {
-  font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase;
+.health-ring-label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; }
+
+/* ── HERO 2 — Enterprise AI SaaS redesign ────────────────── */
+.hero2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: linear-gradient(135deg, #060f1e 0%, #0a1830 55%, #0d0920 100%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  min-height: 340px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+/* Ambient cyan glow top-right */
+.hero2::after {
+  content: '';
+  position: absolute;
+  top: -80px; right: -60px;
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(0,212,255,.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* LEFT */
+.hero2-left {
+  padding: 44px 36px 44px 40px;
+  position: relative; z-index: 2;
+}
+.hero2-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px; font-weight: 900;
+  line-height: 1.25;
+  color: #e2e8f0;
+  margin-bottom: 14px;
+}
+.hero2-title-accent {
+  background: linear-gradient(90deg, #00d4ff, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+.hero2-desc {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.75;
+  max-width: 400px;
+}
+
+/* RIGHT */
+.hero2-right {
+  position: relative;
+  height: 340px;
+  overflow: visible;
+}
+.hero-machine-svg {
+  position: absolute;
+  bottom: 0; right: -10px;
+  width: 110%;
+  height: 100%;
+  max-width: 480px;
+  filter: drop-shadow(0 0 18px rgba(0,212,255,.18)) drop-shadow(0 8px 32px rgba(0,0,0,.6));
+}
+
+/* HOLOGRAPHIC OVERLAY CARDS */
+.holo-card {
+  position: absolute;
+  background: rgba(5, 14, 28, 0.82);
+  border: 1px solid rgba(0,212,255,.3);
+  border-radius: 10px;
+  padding: 9px 13px;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  animation: holo-in .8s ease both;
+  box-shadow: 0 0 14px rgba(0,212,255,.1), inset 0 1px 0 rgba(0,212,255,.1);
+}
+@keyframes holo-in {
+  0%   { opacity:0; transform:translateY(8px) scale(.96); }
+  100% { opacity:1; transform:translateY(0) scale(1); }
+}
+.holo-label {
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #00d4ff;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.holo-value { font-weight: 800; line-height: 1; font-family: 'Orbitron', sans-serif; }
+.holo-sub   { font-size: 10px; font-weight: 600; margin-top: 2px; }
+.holo-sparkline { width: 100%; height: 22px; display: block; margin-top: 5px; }
+
+/* Card positions */
+.holo-health   { top: 14px;  left: 4px;   animation-delay:.1s; min-width:110px; }
+.holo-temp     { top: 115px; left: 4px;   animation-delay:.2s; }
+.holo-vibe     { top: 175px; left: 4px;   animation-delay:.3s; }
+.holo-pressure { top: 252px; left: 4px;   animation-delay:.4s; }
+.holo-ai       { top: 14px;  right: 14px; animation-delay:.15s; }
+
+/* ── STAT CARDS v2 (with sparklines) ─────────────────────── */
+.stats-grid2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.stat-card2 {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  overflow: hidden;
+}
+.stat-card2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,212,255,.1);
+}
+.stat2-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.stat2-icon {
+  width: 38px; height: 38px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.stat2-spark { width: 80px; height: 30px; flex-shrink: 0; }
+.stat2-value { font-size: 26px; font-weight: 800; line-height: 1; }
+.stat2-label { font-size: 13px; font-weight: 600; color: #e2e8f0; margin-top: 4px; }
+.stat2-sub   { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+/* ── HOME BOTTOM BANNER ───────────────────────────────────── */
+.home-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin-bottom: 20px;
 }
 
 /* ── PREDICTION FORM ─────────────────────────────────────── */
@@ -453,9 +577,22 @@ footer {
 }
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1280px) {
+  .stats-grid2 { grid-template-columns: repeat(2, 1fr); }
+  .hero2-title { font-size: 22px; }
+}
 @media (max-width: 1024px) {
   .grid-2, .grid-12, .grid-21 { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .hero2 { grid-template-columns: 1fr; min-height: auto; }
+  .hero2-right { height: 260px; order: -1; }
+  .hero2-left { padding: 28px 24px 24px; }
+  .hero-machine-svg { width: 90%; right: 5%; }
+  .holo-health  { top: 10px; left: 6px; }
+  .holo-temp    { top: 90px; left: 6px; }
+  .holo-vibe    { top: 148px; left: 6px; }
+  .holo-pressure{ display: none; }
+  .home-banner  { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 768px) {
   :root { --sidebar-w: 0px; }
@@ -465,14 +602,18 @@ footer {
   .hamburger { display: block; }
   .grid-3 { grid-template-columns: 1fr; }
   .hero { padding: 32px 20px; }
-  .hero h1 { font-size: 22px; }
-  .hero-badge { position: static; transform: none; margin-top: 24px; }
+  .hero2-title { font-size: 19px; }
+  .hero-machine-svg { width: 100%; }
   .page-content { padding: 16px; }
   .topbar { padding: 0 16px; }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .stats-grid2 { grid-template-columns: repeat(2,1fr); }
+  .holo-ai { display: none; }
 }
 @media (max-width: 480px) {
-  .stats-grid { grid-template-columns: 1fr; }
+  .stats-grid  { grid-template-columns: 1fr; }
+  .stats-grid2 { grid-template-columns: 1fr 1fr; }
+  .hero2-right { height: 200px; }
 }
 
 /* ── OVERLAY ─────────────────────────────────────────────── */

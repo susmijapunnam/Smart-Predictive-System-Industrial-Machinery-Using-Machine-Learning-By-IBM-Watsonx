@@ -275,56 +275,369 @@
     ───────────────────────────────────────────────────── -->
     <section class="page active" id="page-home">
 
-      <!-- HERO -->
-      <div class="hero">
-        <div class="hero-content">
-          <div class="badge badge-online" style="margin-bottom:16px;display:inline-flex;">
-            ● AI-Powered · IBM Watsonx
+      <!-- ═══════════════ HERO ═══════════════ -->
+      <div class="hero2">
+
+        <!-- LEFT: text + CTA -->
+        <div class="hero2-left">
+          <div class="badge badge-online" style="margin-bottom:18px;display:inline-flex;gap:6px;">
+            <span style="width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-top:3px;animation:pulse 2s infinite"></span>
+            AI-Powered · IBM Watsonx
           </div>
-          <h1>SMART PREDICTIVE<br>MAINTENANCE SYSTEM</h1>
-          <p>Predict potential failures in industrial machinery using Machine Learning to minimize downtime and maximize efficiency. Real-time monitoring across your entire machine fleet.</p>
-          <div class="hero-actions">
+          <h1 class="hero2-title">SMART PREDICTIVE<br><span class="hero2-title-accent">MAINTENANCE SYSTEM</span></h1>
+          <p class="hero2-desc">Predict potential failures in industrial machinery using Machine Learning to minimize downtime and maximize efficiency. Real-time monitoring across your entire machine fleet.</p>
+          <div class="hero-actions" style="margin-top:28px;">
             <button class="btn btn-primary btn-lg" data-page="page-dashboard">
-              📊 Go to Dashboard
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              Go to Dashboard
             </button>
             <button class="btn btn-secondary btn-lg" data-page="page-history">
-              🔍 View Predictions
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              View Predictions
             </button>
           </div>
         </div>
-        <div class="hero-badge">
-          <div class="health-ring glow-green">98%</div>
-          <div class="health-ring-label">System Health</div>
-          <div class="badge badge-online" style="margin-top:8px;">✅ Healthy</div>
+
+        <!-- RIGHT: SVG machine + holo overlays -->
+        <div class="hero2-right">
+
+          <!-- HOLO CARD: Machine Health (top-left of machine) -->
+          <div class="holo-card holo-health">
+            <div class="holo-label">MACHINE HEALTH</div>
+            <div class="holo-value" style="color:#10b981;font-size:32px;">98%</div>
+            <div class="holo-sub" style="color:#10b981;">HEALTHY</div>
+            <svg class="holo-sparkline" viewBox="0 0 80 24" preserveAspectRatio="none">
+              <polyline points="0,20 10,16 20,18 30,10 40,12 50,6 60,8 70,4 80,2" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- HOLO CARD: Temperature (mid-left) -->
+          <div class="holo-card holo-temp">
+            <div class="holo-label">TEMPERATURE</div>
+            <div class="holo-value" style="color:#00d4ff;font-size:26px;">45°C</div>
+          </div>
+
+          <!-- HOLO CARD: Vibration (mid-right) -->
+          <div class="holo-card holo-vibe">
+            <div class="holo-label">VIBRATION</div>
+            <svg viewBox="0 0 90 28" style="width:90px;height:28px;display:block;margin:4px 0">
+              <polyline points="0,14 8,6 16,20 24,4 32,18 40,8 48,22 56,6 64,16 72,10 80,18 90,12" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="holo-sub" style="color:#f59e0b;">0.24g — Normal</div>
+          </div>
+
+          <!-- HOLO CARD: Pressure (bottom-left) -->
+          <div class="holo-card holo-pressure">
+            <div class="holo-label">PRESSURE</div>
+            <div class="holo-value" style="color:#a78bfa;font-size:22px;">2.4 bar</div>
+          </div>
+
+          <!-- HOLO CARD: AI Monitoring (top-right) -->
+          <div class="holo-card holo-ai">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <span style="font-size:14px">🤖</span>
+              <div class="holo-label" style="margin:0;">AI MONITORING</div>
+            </div>
+            <div class="holo-sub" style="color:#10b981;margin-top:4px;">● Active — 24/7</div>
+          </div>
+
+          <!-- THE INDUSTRIAL MACHINE SVG -->
+          <svg class="hero-machine-svg" viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Industrial electric motor with robotic arm in smart factory">
+            <defs>
+              <!-- Filters -->
+              <filter id="hm-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="4" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="hm-glow2" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="7" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="hm-soft" x="-10%" y="-10%" width="120%" height="120%">
+                <feGaussianBlur stdDeviation="2"/>
+              </filter>
+              <!-- Gradients -->
+              <radialGradient id="hm-bg" cx="60%" cy="50%" r="55%">
+                <stop offset="0%" stop-color="#0a2040" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#030810" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="hm-motor-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1c3a5e"/>
+                <stop offset="40%" stop-color="#0f2540"/>
+                <stop offset="100%" stop-color="#071828"/>
+              </linearGradient>
+              <linearGradient id="hm-motor-top" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#253d5a"/>
+                <stop offset="100%" stop-color="#0e2238"/>
+              </linearGradient>
+              <linearGradient id="hm-shaft" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2a4a6e"/>
+                <stop offset="50%" stop-color="#4a7aa0"/>
+                <stop offset="100%" stop-color="#1a3050"/>
+              </linearGradient>
+              <linearGradient id="hm-fan" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a3a60"/>
+                <stop offset="100%" stop-color="#0c2040"/>
+              </linearGradient>
+              <linearGradient id="hm-arm1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#c87020"/>
+                <stop offset="50%" stop-color="#e8921e"/>
+                <stop offset="100%" stop-color="#a05810"/>
+              </linearGradient>
+              <linearGradient id="hm-arm2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d07818"/>
+                <stop offset="100%" stop-color="#b06010"/>
+              </linearGradient>
+              <linearGradient id="hm-arm3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#e09020"/>
+                <stop offset="100%" stop-color="#c07010"/>
+              </linearGradient>
+              <linearGradient id="hm-floor" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+              </linearGradient>
+              <radialGradient id="hm-glow-pool" cx="50%" cy="100%" r="50%">
+                <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="hm-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#142a48"/>
+                <stop offset="100%" stop-color="#0a1e36"/>
+              </linearGradient>
+              <pattern id="hm-grid" width="22" height="22" patternUnits="userSpaceOnUse">
+                <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#00d4ff" stroke-width="0.25" stroke-opacity="0.1"/>
+              </pattern>
+              <linearGradient id="hm-edge-l" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#050d1a"/>
+                <stop offset="100%" stop-color="#050d1a" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="hm-edge-r" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#050d1a"/>
+                <stop offset="100%" stop-color="#050d1a" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Ambient bg + grid -->
+            <rect width="420" height="380" fill="url(#hm-bg)"/>
+            <rect width="420" height="380" fill="url(#hm-grid)"/>
+
+            <!-- Floor glow -->
+            <ellipse cx="210" cy="368" rx="160" ry="18" fill="url(#hm-glow-pool)"/>
+            <rect x="60" y="360" width="300" height="1.5" rx="1" fill="#00d4ff" opacity="0.2"/>
+
+            <!-- ══ MOTOR BODY ══ -->
+            <!-- Motor base platform -->
+            <rect x="105" y="295" width="180" height="28" rx="5" fill="url(#hm-motor-body)" stroke="#1e4060" stroke-width="1"/>
+            <rect x="110" y="300" width="170" height="8" rx="3" fill="#071828" opacity="0.6"/>
+            <!-- Base bolts -->
+            <circle cx="122" cy="312" r="4" fill="#1a3a5e" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.5"/>
+            <circle cx="270" cy="312" r="4" fill="#1a3a5e" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.5"/>
+            <!-- Indicator strip -->
+            <rect x="140" y="306" width="110" height="3" rx="1.5" fill="#0a1e35"/>
+            <rect x="140" y="306" width="80"  height="3" rx="1.5" fill="#10b981" opacity="0.7"/>
+
+            <!-- Main cylindrical motor housing -->
+            <!-- Side face (3D depth) -->
+            <ellipse cx="105" cy="230" rx="12" ry="70" fill="#0a1e38" stroke="#162e4e" stroke-width="0.8"/>
+            <rect x="93"  y="160" width="12" height="140" fill="#0a1e38"/>
+            <!-- Top face -->
+            <ellipse cx="195" cy="158" rx="90" ry="14" fill="url(#hm-motor-top)" stroke="#1a3a5c" stroke-width="0.8"/>
+            <!-- Front face (main body) -->
+            <rect x="105" y="158" width="180" height="140" rx="2" fill="url(#hm-motor-body)" stroke="#162e4e" stroke-width="0.8"/>
+            <!-- Ribbing lines across motor body -->
+            <line x1="105" y1="183" x2="285" y2="183" stroke="#0d2540" stroke-width="2.5"/>
+            <line x1="105" y1="198" x2="285" y2="198" stroke="#0d2540" stroke-width="2.5"/>
+            <line x1="105" y1="213" x2="285" y2="213" stroke="#0d2540" stroke-width="2.5"/>
+            <line x1="105" y1="228" x2="285" y2="228" stroke="#0d2540" stroke-width="2.5"/>
+            <line x1="105" y1="243" x2="285" y2="243" stroke="#0d2540" stroke-width="2.5"/>
+            <line x1="105" y1="258" x2="285" y2="258" stroke="#0d2540" stroke-width="2.5"/>
+            <line x1="105" y1="273" x2="285" y2="273" stroke="#0d2540" stroke-width="2.5"/>
+            <!-- Cyan edge highlight left -->
+            <rect x="105" y="158" width="3" height="140" fill="#00d4ff" opacity="0.25"/>
+            <!-- Cyan edge highlight top -->
+            <rect x="105" y="158" width="180" height="3" fill="#00d4ff" opacity="0.18"/>
+
+            <!-- Junction box on motor top -->
+            <rect x="155" y="133" width="70" height="28" rx="4" fill="url(#hm-panel)" stroke="#1e4060" stroke-width="0.8"/>
+            <rect x="160" y="138" width="60" height="14" rx="2" fill="#071525" stroke="#00d4ff" stroke-width="0.4" stroke-opacity="0.4"/>
+            <circle cx="170" cy="145" r="2.5" fill="#00d4ff" filter="url(#hm-glow)" opacity="0.9"/>
+            <circle cx="183" cy="145" r="2.5" fill="#10b981" filter="url(#hm-glow)" opacity="0.9"/>
+            <circle cx="196" cy="145" r="2.5" fill="#f59e0b" filter="url(#hm-glow)" opacity="0.9"/>
+            <circle cx="209" cy="145" r="2.5" fill="#7c3aed" filter="url(#hm-glow)" opacity="0.9"/>
+
+            <!-- Cooling fan shroud (right side of motor) -->
+            <ellipse cx="285" cy="230" rx="12" ry="70" fill="#0d2038" stroke="#162e4e" stroke-width="0.8"/>
+            <!-- Fan cover circles -->
+            <circle cx="285" cy="230" r="60" fill="url(#hm-fan)" stroke="#162e4e" stroke-width="1.2"/>
+            <circle cx="285" cy="230" r="52" fill="none" stroke="#1a3a5c" stroke-width="0.8"/>
+            <circle cx="285" cy="230" r="44" fill="none" stroke="#162e4e" stroke-width="0.8"/>
+            <circle cx="285" cy="230" r="35" fill="#071828" stroke="#1a3050" stroke-width="0.8"/>
+            <circle cx="285" cy="230" r="20" fill="#0a1e35" stroke="#00d4ff" stroke-width="0.6" stroke-opacity="0.5"/>
+            <!-- Fan blades -->
+            <g transform="translate(285,230)">
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(0)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(45)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(90)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(135)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(180)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(225)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(270)"/>
+              <path d="M0,-14 Q4,-30 12,-40 Q6,-25 0,-14" fill="#1a3a5e" opacity="0.85" transform="rotate(315)"/>
+            </g>
+            <circle cx="285" cy="230" r="7" fill="#0a1e35" stroke="#00d4ff" stroke-width="0.8" stroke-opacity="0.6"/>
+            <circle cx="285" cy="230" r="3" fill="#00d4ff" filter="url(#hm-glow)" opacity="0.8"/>
+
+            <!-- Output shaft -->
+            <rect x="50" y="224" width="55" height="12" rx="4" fill="url(#hm-shaft)" stroke="#1a3a5e" stroke-width="0.8"/>
+            <rect x="50" y="227" width="55" height="3" rx="1" fill="#4a7aa0" opacity="0.5"/>
+            <circle cx="58" cy="230" r="7" fill="#1a3050" stroke="#00d4ff" stroke-width="0.7" stroke-opacity="0.6"/>
+
+            <!-- Conduit / cable -->
+            <path d="M 105 190 Q 80 195 70 210 Q 62 224 58 230" stroke="#0f3050" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path d="M 105 190 Q 80 195 70 210 Q 62 224 58 230" stroke="#1a4a70" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+            <!-- ══ ROBOTIC ARM (orange/amber) ══ -->
+
+            <!-- Arm base mount (attaches to motor top-left area) -->
+            <rect x="88" y="110" width="40" height="30" rx="4" fill="url(#hm-arm1)" stroke="#c06000" stroke-width="0.8"/>
+            <rect x="92" y="115" width="32" height="10" rx="2" fill="#a05010" opacity="0.7"/>
+            <circle cx="108" cy="133" r="8" fill="#b86010" stroke="#e09020" stroke-width="0.8"/>
+            <circle cx="108" cy="133" r="4" fill="#904808"/>
+            <circle cx="108" cy="133" r="2" fill="#e09020" filter="url(#hm-glow)" opacity="0.7"/>
+
+            <!-- Lower arm segment -->
+            <rect x="94" y="44"  width="28" height="90" rx="7" fill="url(#hm-arm2)" stroke="#b06010" stroke-width="0.8"/>
+            <!-- Arm detail lines -->
+            <rect x="94" y="44" width="4" height="90" rx="2" fill="#e09030" opacity="0.35"/>
+            <line x1="98" y1="60"  x2="118" y2="60"  stroke="#c07020" stroke-width="0.8" stroke-opacity="0.6"/>
+            <line x1="98" y1="80"  x2="118" y2="80"  stroke="#c07020" stroke-width="0.8" stroke-opacity="0.6"/>
+            <line x1="98" y1="100" x2="118" y2="100" stroke="#c07020" stroke-width="0.8" stroke-opacity="0.6"/>
+
+            <!-- Mid joint -->
+            <circle cx="108" cy="50" r="16" fill="url(#hm-arm3)" stroke="#d08020" stroke-width="1"/>
+            <circle cx="108" cy="50" r="10" fill="#904808" stroke="#e09020" stroke-width="0.8"/>
+            <circle cx="108" cy="50" r="5"  fill="#c07010"/>
+            <circle cx="108" cy="50" r="2"  fill="#f0a020" filter="url(#hm-glow)" opacity="0.8"/>
+            <!-- Bolt ring -->
+            <circle cx="108" cy="34" r="2" fill="#d08020" opacity="0.7"/>
+            <circle cx="124" cy="50" r="2" fill="#d08020" opacity="0.7"/>
+            <circle cx="108" cy="66" r="2" fill="#d08020" opacity="0.7"/>
+            <circle cx="92"  cy="50" r="2" fill="#d08020" opacity="0.7"/>
+
+            <!-- Upper arm (angled up-right) -->
+            <rect x="100" y="4" width="22" height="52" rx="6" fill="url(#hm-arm2)" stroke="#b06010" stroke-width="0.8" transform="rotate(-25,111,30)"/>
+            <rect x="100" y="4" width="4"  height="52" rx="2" fill="#e09030" opacity="0.3" transform="rotate(-25,111,30)"/>
+
+            <!-- Wrist joint -->
+            <circle cx="136" cy="20" r="12" fill="url(#hm-arm3)" stroke="#d08020" stroke-width="0.8"/>
+            <circle cx="136" cy="20" r="7"  fill="#904808" stroke="#e09020" stroke-width="0.7"/>
+            <circle cx="136" cy="20" r="3"  fill="#f0a020" filter="url(#hm-glow)" opacity="0.8"/>
+
+            <!-- Gripper -->
+            <rect x="130" y="4"  width="12" height="20" rx="3" fill="url(#hm-arm1)" stroke="#c06000" stroke-width="0.7"/>
+            <path d="M 128 6 Q 120 0 118 -8 Q 124 -4 128 4 Z" fill="url(#hm-arm1)" stroke="#c06000" stroke-width="0.6"/>
+            <path d="M 144 6 Q 152 0 154 -8 Q 148 -4 144 4 Z" fill="url(#hm-arm1)" stroke="#c06000" stroke-width="0.6"/>
+            <circle cx="122" cy="-6" r="3" fill="#f0a020" filter="url(#hm-glow2)" opacity="0.9"/>
+            <circle cx="150" cy="-6" r="3" fill="#f0a020" filter="url(#hm-glow2)" opacity="0.9"/>
+
+            <!-- Scan / circuit lines on floor -->
+            <line x1="80"  y1="361" x2="340" y2="361" stroke="#00d4ff" stroke-width="0.5" stroke-opacity="0.3" stroke-dasharray="4 6"/>
+            <line x1="120" y1="355" x2="300" y2="355" stroke="#00d4ff" stroke-width="0.4" stroke-opacity="0.2" stroke-dasharray="3 8"/>
+
+            <!-- Energy particles floating -->
+            <circle cx="340" cy="100" r="2"   fill="#00d4ff" filter="url(#hm-glow)" opacity="0.7">
+              <animate attributeName="cy" values="100;90;100" dur="2.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.7;1;0.7" dur="2.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="360" cy="180" r="1.5" fill="#7c3aed" filter="url(#hm-glow)" opacity="0.6">
+              <animate attributeName="cy" values="180;170;180" dur="1.9s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;1;0.6" dur="1.9s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="70"  cy="140" r="2"   fill="#10b981" filter="url(#hm-glow)" opacity="0.5">
+              <animate attributeName="cy" values="140;130;140" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="380" cy="260" r="1.5" fill="#00d4ff" filter="url(#hm-glow)" opacity="0.6">
+              <animate attributeName="cy" values="260;250;260" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Scan beam -->
+            <rect x="0" y="0" width="420" height="2" rx="1" fill="#00d4ff" opacity="0.05">
+              <animate attributeName="y" values="0;378;0" dur="5s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Left fade overlay (blends into dark bg) -->
+            <rect x="0" y="0" width="70" height="380" fill="url(#hm-edge-l)"/>
+            <!-- Right fade overlay -->
+            <rect x="350" y="0" width="70" height="380" fill="url(#hm-edge-r)"/>
+          </svg>
+
+        </div><!-- /.hero2-right -->
+      </div><!-- /.hero2 -->
+
+      <!-- ═══════════════ STAT CARDS ═══════════════ -->
+      <div class="stats-grid2">
+        <!-- Card 1 -->
+        <div class="stat-card2">
+          <div class="stat2-top">
+            <div class="stat2-icon" style="background:rgba(0,212,255,.1);color:#00d4ff;">🏭</div>
+            <svg class="stat2-spark" viewBox="0 0 80 30" preserveAspectRatio="none">
+              <polyline points="0,28 12,22 24,24 36,14 48,16 60,10 72,6 80,4" fill="none" stroke="#00d4ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stat2-value">12,450</div>
+          <div class="stat2-label">Machines Monitored</div>
+          <div class="stat2-sub">Real-time monitoring across all locations</div>
+        </div>
+        <!-- Card 2 -->
+        <div class="stat-card2">
+          <div class="stat2-top">
+            <div class="stat2-icon" style="background:rgba(16,185,129,.1);color:#10b981;">🎯</div>
+            <svg class="stat2-spark" viewBox="0 0 80 30" preserveAspectRatio="none">
+              <polyline points="0,26 12,22 24,18 36,16 48,12 60,8 72,5 80,3" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stat2-value" style="color:#10b981">97.8%</div>
+          <div class="stat2-label">Prediction Accuracy</div>
+          <div class="stat2-sub">AI Model Performance</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="stat-card2">
+          <div class="stat2-top">
+            <div class="stat2-icon" style="background:rgba(245,158,11,.1);color:#f59e0b;">⚠️</div>
+            <svg class="stat2-spark" viewBox="0 0 80 30" preserveAspectRatio="none">
+              <polyline points="0,20 12,24 24,16 36,22 48,14 60,18 72,10 80,14" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stat2-value" style="color:#f59e0b">1,248</div>
+          <div class="stat2-label">Failures Prevented</div>
+          <div class="stat2-sub">Potential breakdowns avoided</div>
+        </div>
+        <!-- Card 4 -->
+        <div class="stat-card2">
+          <div class="stat2-top">
+            <div class="stat2-icon" style="background:rgba(16,185,129,.1);color:#10b981;">💵</div>
+            <svg class="stat2-spark" viewBox="0 0 80 30" preserveAspectRatio="none">
+              <polyline points="0,28 12,24 24,20 36,16 48,14 60,10 72,7 80,4" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="stat2-value" style="color:#10b981">$2.4M</div>
+          <div class="stat2-label">Cost Saved</div>
+          <div class="stat2-sub">Estimated savings this month</div>
         </div>
       </div>
 
-      <!-- STATS -->
-      <div class="stats-grid">
-        <div class="stat-card" style="--card-accent:linear-gradient(90deg,#00d4ff,#0099cc);--icon-bg:rgba(0,212,255,.1)">
-          <div class="stat-icon">🏭</div>
-          <div class="stat-value">12,450</div>
-          <div class="stat-label">Machines Monitored</div>
-          <div class="stat-change up">↑ Real-time monitoring</div>
+      <!-- BOTTOM BANNER -->
+      <div class="home-banner">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="font-size:22px;flex-shrink:0">🛡️</span>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#e2e8f0;">Keep your machines healthy and efficient</div>
+            <div style="font-size:12px;color:#64748b;margin-top:2px;">Our AI models continuously learn and adapt to provide the most accurate predictions.</div>
+          </div>
         </div>
-        <div class="stat-card" style="--card-accent:linear-gradient(90deg,#10b981,#059669);--icon-bg:rgba(16,185,129,.1)">
-          <div class="stat-icon">✅</div>
-          <div class="stat-value" style="color:var(--accent3)">97.8%</div>
-          <div class="stat-label">Prediction Accuracy</div>
-          <div class="stat-change up">↑ Without Maintenance</div>
-        </div>
-        <div class="stat-card" style="--card-accent:linear-gradient(90deg,#f59e0b,#d97706);--icon-bg:rgba(245,158,11,.1)">
-          <div class="stat-icon">⚠️</div>
-          <div class="stat-value" style="color:var(--warning)">1,248</div>
-          <div class="stat-label">Failure Prevented</div>
-          <div class="stat-change up">↑ Total Estimated</div>
-        </div>
-        <div class="stat-card" style="--card-accent:linear-gradient(90deg,#10b981,#059669);--icon-bg:rgba(16,185,129,.1)">
-          <div class="stat-icon">💵</div>
-          <div class="stat-value" style="color:var(--accent3)">$2.4M</div>
-          <div class="stat-label">Cost Saved</div>
-          <div class="stat-change up">↑ This Month</div>
-        </div>
+        <button class="btn btn-secondary" data-page="page-about" style="flex-shrink:0;white-space:nowrap;">
+          Learn More →
+        </button>
       </div>
 
       <!-- QUICK PREDICTION + RECENT -->
