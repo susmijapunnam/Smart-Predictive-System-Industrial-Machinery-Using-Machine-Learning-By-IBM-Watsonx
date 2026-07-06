@@ -47,6 +47,7 @@ body {
   height: 100vh;
   z-index: 200;
   transition: transform var(--transition);
+  overflow: hidden;
 }
 
 .sidebar-logo {
@@ -69,7 +70,7 @@ body {
   text-transform: uppercase;
 }
 
-.sidebar-nav { flex: 1; padding: 16px 0; overflow-y: auto; }
+.sidebar-nav { flex: 0 1 auto; padding: 16px 0; overflow-y: auto; }
 .nav-item {
   display: flex; align-items: center; gap: 12px;
   padding: 12px 18px;
@@ -103,13 +104,29 @@ body {
 }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 
-/* ── SIDEBAR ROBOT IMAGE ─────────────────────────────────── */
-.sidebar-robot {
-  padding: 16px 18px 8px;
-  text-align: center;
-  opacity: .6;
+/* ── SIDEBAR ROBOT ARM ILLUSTRATION ─────────────────────── */
+.sidebar-robot-wrap {
+  padding: 8px 12px 4px;
+  margin-top: auto;
+  animation: robot-fadein 1.2s ease forwards;
+  opacity: 0;
 }
-.sidebar-robot img { width: 100%; max-width: 160px; }
+@keyframes robot-fadein {
+  0%   { opacity: 0; transform: translateY(18px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.sidebar-robot-svg {
+  width: 100%;
+  max-width: 204px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.25));
+  transition: filter 0.3s ease;
+}
+.sidebar-robot-svg:hover {
+  filter: drop-shadow(0 0 18px rgba(0, 212, 255, 0.5));
+}
 
 /* ── MAIN LAYOUT ─────────────────────────────────────────── */
 .main-wrap {
