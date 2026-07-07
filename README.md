@@ -8,6 +8,7 @@ The Smart Predictive System for Industrial Machinery Using Machine Learning is a
 - **Method:** AutoAI (Automated Machine Learning)
 - **Creator:** psusmija@gmail.com
 
+
 ## 🚀 How To Start Guide
 
 Follow these steps to set up and run the Smart Predictive Maintenance System on your local machine.
